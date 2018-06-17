@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Tweet Archive Formatter</h1>
+    <p>Your tweets are being formatted right now. Once they're ready, you can find them at the following link: </p>
+    <br/>
+    <p>
+      <a href="https://s3.amazonaws.com/phil-tweetarchive-bucket/tweets/{{ archive }}.txt">Your readable Tweet archive</a>
+    </p>
+    <br/>
+    <p>This link will only be shown once and your archive will be automatically deleted after 3 days. To download it, right click and click <strong>Save As...</strong>.</p>
+  </div>
+</body>
+
+</html>

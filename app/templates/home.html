@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Tweet Archive Formatter</h1>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="file">Make your Tweet archive readable</label>
+        <input name='file' type="file" class="form-control-file" id="file">
+      </div>
+      <small>This should be the original <em>tweet.js</em> file from your downloaded archive.</small>
+      <br/>
+      <input type="submit" class="btn btn-primary"></input>
+    </form>
+  </div>
+</body>
+</html>
