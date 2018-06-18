@@ -24,6 +24,8 @@ def put_in_S3(file, filename):
 
 @app.route('/', methods=['GET'])
 def home():
+    if 'archive_id' in session:
+        session.pop('archive_id')
     return render_template('home.html')
 
 @app.route('/upload', methods=['GET', 'POST'])
